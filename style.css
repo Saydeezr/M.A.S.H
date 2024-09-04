@@ -1,0 +1,103 @@
+
+
+body{
+    background: linear-gradient(90deg, rgba(249,148,0,1) 0%, rgba(251,55,6,1) 50%, rgba(251,53,6,1) 50%, rgba(255,0,237,1) 100%)
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header{
+    font-size: 20vh;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 45px;
+}
+
+.header:before{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(20px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 35s linear 1;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* .begin-btn{
+    background-color: rgb(0, 170, 255);
+    color: white;
+    margin-top: 15px;
+    padding: 10px 50px;
+    box-shadow: 5px 3px 3px rgb(73, 73, 73);;
+} */
+
+.btn {
+    padding: 15px;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    transition: all .5s ease; 
+  }
+  
+.btn--action{
+    display: block;
+    width: 100%;
+    padding: 1rem 5rem;
+    border-radius: 1.5rem;
+    background-color: #fefefe;
+    color: #000;
+    font-size: 1.5rem;
+    font-family: arial;
+    font-weight: bold;
+    transition: all .5s ease 0s; 
+    box-shadow: 0 10px #ebebeb;
+  }
+.btn--action span{
+    display: inline-block;
+    position: relative;
+    transition: all .5s ease;
+  }
+  
+  .btn--action span:before{
+    content: '\f04b'; 
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: FontAwesome;
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    left: 1.5rem;
+    opacity: 0;
+    transition: all .1s ease 0s;
+  }
+  
+  .btn--action:hover span{
+    padding-left: 2rem; 
+    color: white;
+  }
+  
+  .btn--action:hover span:before{
+    left: 0;
+    opacity: 1;
+  }
+  
