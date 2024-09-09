@@ -1,6 +1,8 @@
 # M.A.S.H.
 Welcome to the M.A.S.H (Mansion, Apartment, Shack, House) game! This is a fun and nostalgic game that predicts your future in various categories such as where you’ll live, who you’ll marry, and what job you’ll have.
 
+![image](https://github.com/user-attachments/assets/2e844e29-1e8a-4fe4-a18b-4a70cd746ede)
+
 ## Table of Contents
 - Introduction
 - Installation
@@ -28,5 +30,3 @@ Click the “Submit” button to see your future.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
-![image](https://github.com/user-attachments/assets/2e844e29-1e8a-4fe4-a18b-4a70cd746ede)
