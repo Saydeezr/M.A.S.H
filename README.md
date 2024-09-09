@@ -24,7 +24,7 @@ npm start
 ## Usage
 Open the application in your browser.
 Answer the questions presented to you.
-Click the “Predict” button to see your future.
+Click the “Submit” button to see your future.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
