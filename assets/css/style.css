@@ -33,6 +33,12 @@ body{
     100% { background-position: 0 0; }
 }
 
+@supports not (-webkit-text-fill-color: transparent) {
+    .header {
+        color: #ffffff; 
+    }
+}
+
 @keyframes jumpIn {
     0% {
         transform: translateY(100%);
@@ -82,7 +88,7 @@ body{
     transition: all .5s ease; 
 }
 
-.btn--action {
+.btn-action {
     display: block;
     width: 100%;
     padding: 1rem 5rem;
@@ -96,18 +102,18 @@ body{
     box-shadow: 0 10px #ebebeb;
 }
 
-.btn--action:hover {
-    background-color: #fefefe; /* Same background color as the normal state */
-    color: #000; /* Ensure the text color remains the same */
+.btn-action:hover {
+    background-color: #fefefe; 
+    color: #000; 
 }
 
-.btn--action span {
+.btn-action span {
     display: inline-block;
     position: relative;
     transition: all .5s ease;
 }
 
-.btn--action span:before {
+.btn-action span:before {
     content: '\f04b'; 
     color: #000000;
     font-size: 1rem;
@@ -120,12 +126,12 @@ body{
     transition: all .1s ease 0s;
 }
 
-.btn--action:hover span {
+.btn-action:hover span {
     padding-left: 2rem; 
     color: rgb(0, 0, 0);
 }
 
-.btn--action:hover span:before {
+.btn-action:hover span:before {
     left: 0;
     opacity: 1;
 }

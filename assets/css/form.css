@@ -1,0 +1,72 @@
+/* form{
+color: white;
+    background-color: #5e5e7d;
+    border-radius: 5px;
+    background-color: aliceblue;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    box-shadow: -1px 3px 18px 0px rgba(0,0,0,0.75);
+} */
+form{
+    color: white;
+    background-color: #5e5e7d;
+    border-radius: 5px;
+    
+    width: 400px;
+    padding: 40px;
+    margin: 150px auto;
+    
+    -webkit-box-shadow: -1px 3px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 18px 0px rgba(0,0,0,0.75);
+}
+    
+p{
+    font-size: 0.9em;
+}
+    
+button{
+    width: 100%;
+    text-align: center;
+    color: grey;
+    margin-top: 20px;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+    
+.form-group{
+    margin: 15px auto;  
+        label{
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+    
+}  
+
+.input-group{
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 3px 18px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: -1px 3px 18px 0px rgba(0,0,0,0.35);
+    box-shadow: -1px 3px 18px 0px rgba(0,0,0,0.35);
+}         
+       
+input{
+    padding: 3px;
+    width: 100%;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.hidden{
+    display: none;
+}
+
+#error{
+    color: rgb(236, 220, 255);
+    font-style: italic;
+    padding-top: 5px;
+}
