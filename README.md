@@ -3,11 +3,6 @@ Welcome to the M.A.S.H (Mansion, Apartment, Shack, House) game! This is a fun an
 
 ![image](https://github.com/user-attachments/assets/2e844e29-1e8a-4fe4-a18b-4a70cd746ede)
 
-## Table of Contents
-- Introduction
-- Installation
-- Usage
-- License
   
 ## Introduction
 M.A.S.H was one of my favorite games to play as a child, so I decided to create something younger me would absolutely love. Instead of paper and pen, I brougth it up a knotch and made this version digital. Simply press start and you will go throught a list of questions that will produce your future!
