@@ -24,7 +24,7 @@
             
        
         <div class="container hidden" id="section2">
-            <form id="gameForm">
+            <form>
                 <!-- name input -->
                 <div class="form-group" id="name-group">
                     <label for="name">Your Name</label>
@@ -32,7 +32,7 @@
                         <input class="form-control" type="text" id="name" />
                     </div>
                     <div id="error"></div>
-                    <button type="submit" class="btn btn-default" id="next">Next</button>
+                    <button  onclick="showForm('lover-group')"" class="btn btn-default" id="next">Next</button>
                 </div>
                 <!-- 1st part of questionnaire -->
                 <div class="form-group hidden" id="lover-group">
@@ -40,19 +40,19 @@
                         <h3>Name the love of your life:</h3>
                         <label for="lover1">Option #1</label>
                         <div class="input-group">
-                            <input class="form-control" type="text" id="lover1" required />
+                            <input class="form-control" type="text" id="lover1"/>
                         </div>
                         <label for="lover2">Option #2</label>
                         <div class="input-group">
-                            <input class="form-control" type="text" id="lover2" required />
+                            <input class="form-control" type="text" id="lover2"/>
                         </div>
                         <label for="lover3">Option #3</label>
                         <div class="input-group">
-                            <input class="form-control" type="text" id="lover3" required/>
+                            <input class="form-control" type="text" id="lover3"/>
                         </div>
                         <label for="lover4">Option #4</label>
                         <div class="input-group">
-                            <input class="form-control" type="text" id="lover4" required/>
+                            <input class="form-control" type="text" id="lover4"/>
                         </div>
                     </div>
                     <div class="row">

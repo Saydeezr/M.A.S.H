@@ -8,41 +8,48 @@ const formPopUp = async (event) => {
     console.log('I have been clicked! Lets start the game!');
     document.getElementById('section1').classList.add('hidden');
     document.getElementById('section2').classList.remove('hidden');
-}
+};
 
-//makes sure field is not empty for name
-next.addEventListener("click", (event) => {
-    event.preventDefault();
 
-    let name = document.getElementById('name').value.trim();
-
-    if(!name) {
-        const errorMsg = document.getElementById('error');
-        errorMsg.textContent = "(Name is required)";
-        return;
-    } console.log('Name: ', name);
-      showForm('lover-group');
-});
-
-document.getElementById('gameForm').addEventListener('submit', 
-    function(event) {
-        if(!this.checkValidity()) {
-            event.preventDefault();
-            alert('Please fill out all fields.')
-            return;
+//require all fields be filled out to move on to next form 
+function checkForm() {
+    const forms = document.querySelectorAll('form');
+    const form = forms[0]
+    const inputs = form.querySelectorAll('input');
+    let allFilled = true;
+       // loops over all inputs
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].required = true;
+            console.log(inputs[i].value);
+        // if input left empty, notifies user
+            if (!inputs[i].value) {
+                console.log('INPUT REQUIRED');
+                alert('Please fill out all required fields.');
+                allFilled = false;
+               return;
+            }
         }
-    })
 
-//function to navigate between forms [back and forwards]
+        if (!allFilled) {
+            return; 
+        }
+    // }
+};
+
+
+//navigate between forms and handles hideness/display
 function showForm(formId) {
     const forms = document.querySelectorAll('.form-group');
     forms.forEach(form => form.classList.add('hidden'));
     document.getElementById(formId).classList.remove('hidden');
-  }
+
+    checkForm(); 
+  };
+
 
   //function to get calculate results
   const submitResults = () => {
     console.log('Submitted Results!')
-  }
+  };
 
 start.addEventListener("click", formPopUp);        
