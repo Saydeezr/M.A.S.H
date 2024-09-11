@@ -1,5 +1,6 @@
 const start = document.getElementById('play-btn');
 const next = document.getElementById('next');
+let formData = {};
 
 //pulls up form and hides landing page section
 const formPopUp = async (event) => {
@@ -25,14 +26,16 @@ function checkForm(currentGroup) {
             if (!inputs[i].value) {
                 console.log('INPUT REQUIRED');
                 allFilled = false;
+            } else {
+                formData[inputs[i].id] =inputs[i].value
+                console.log(formData)
             }
         }
-
         return allFilled;
 };
 
 
-//navigate between forms and handles hideness/display
+//navigate between forms/form groups
 function showForm(formId) {
     const currentGroup = document.querySelector('.form-group:not(.hidden)');
     const currentGroupId = currentGroup.id;
@@ -50,5 +53,6 @@ function showForm(formId) {
   const submitResults = () => {
     console.log('Submitted Results!')
   };
+
 
 start.addEventListener("click", formPopUp);        
