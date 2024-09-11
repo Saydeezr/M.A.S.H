@@ -12,11 +12,11 @@ const formPopUp = async (event) => {
 
 
 //require all fields be filled out to move on to next form 
-function checkForm() {
-    const forms = document.querySelectorAll('form');
-    const form = forms[0]
-    const inputs = form.querySelectorAll('input');
+function checkForm(currentGroup) {
+    const formGroup = document.getElementById(currentGroup);
+    const inputs = formGroup.querySelectorAll('input');
     let allFilled = true;
+
        // loops over all inputs
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].required = true;
@@ -24,26 +24,25 @@ function checkForm() {
         // if input left empty, notifies user
             if (!inputs[i].value) {
                 console.log('INPUT REQUIRED');
-                alert('Please fill out all required fields.');
                 allFilled = false;
-               return;
             }
         }
 
-        if (!allFilled) {
-            return; 
-        }
-    // }
+        return allFilled;
 };
 
 
 //navigate between forms and handles hideness/display
 function showForm(formId) {
+    const currentGroup = document.querySelector('.form-group:not(.hidden)');
+    const currentGroupId = currentGroup.id;
+
+    if (checkForm(currentGroupId)) {
     const forms = document.querySelectorAll('.form-group');
     forms.forEach(form => form.classList.add('hidden'));
     document.getElementById(formId).classList.remove('hidden');
 
-    checkForm(); 
+    }
   };
 
 
