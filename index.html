@@ -31,7 +31,7 @@
                     <div class="input-group">
                         <input class="form-control" type="text" id="name" />
                     </div>
-                    <button  onclick="showForm('lover-group')" class="btn btn-default" id="next">Next</button>
+                    <button class="btn btn-default next-btn" id="next">Next</button>
                 </div>
                 <!-- 1st part of questionnaire -->
                 <div class="form-group hidden" id="lover-group">
@@ -47,7 +47,7 @@
                         </div>
                         <label for="lover3">Option #3</label>
                         <div class="input-group">
-                            <input class="form-control" type="text" id="lover3"/>
+                            <input class="form-control" data-target="lover-group" type="text" id="lover3"/>
                         </div>
                         <label for="lover4">Option #4</label>
                         <div class="input-group">
@@ -55,9 +55,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button onclick="showForm('name-group')" class="btn col" id="back">Back</button>
-                        <button type="submit" onclick="showForm('job-group')" class="btn col" id="next">Next</button>
-                    </div>
+                        <button class="btn col back-btn" data-target="name-group">Back</button>
+                        <button class="btn col next-btn" data-target="job-group">Next</button>
+                    </div>            
                 </div>
                 <!-- 2nd part of questionnaire -->
                 <div class="form-group hidden" id="job-group">
@@ -81,8 +81,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button onclick="showForm('lover-group')" class="btn col" id="back">Back</button>
-                        <button type="submit" onclick="showForm('transport-group')" class="btn col" id="next">Next</button>
+                        <button class="btn col back-btn" data-target="lover-group">Back</button>
+                        <button class="btn col next-btn" data-target="transport-group">Next</button>
                     </div>
                 </div>
                 <!-- 3rd part of questionnaire -->
@@ -107,8 +107,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button onclick="showForm('job-group')" class="btn col" id="back">Back</button>
-                        <button type="submit" onclick="showForm('money-group')" class="btn col" id="next">Next</button>
+                        <button class="btn col back-btn" data-target="job-group">Back</button>
+                        <button class="btn col next-btn" data-target="money-group">Next</button>
                     </div>
                 </div>
                 <!-- 4th part of questionnaire -->
@@ -133,8 +133,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button onclick="showForm('transport-group')" class="btn col" id="back">Back</button>
-                        <button type="submit" onclick="showForm('pet-group')" class="btn col" id="next">Next</button>
+                        <button class="btn col back-btn" data-target="money-group" >Back</button>
+                        <button class="btn col next-btn" data-target="pet-group" id="submit-results">Submit</button>
                     </div>
                 </div>
                 <!-- 5th part of questionnaire -->
@@ -159,7 +159,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button onclick="showForm('money-group')" class="btn col" id="back">Back</button>
+                        <button onclick="showForm('money-group')" class="btn col back-btn" id="back">Back</button>
                         <button type="submit" onclick="submitResults()" class="btn col" id="submit-results">Submit</button>
                     </div>
                 </div>
