@@ -50,12 +50,14 @@ function showForm(event) {
     const currentGroup = document.querySelector('.form-group:not(.hidden)');
     const currentGroupId = currentGroup.id;
 
+    console.log('Current visible group:', currentGroup);
+
     //validate current form
     if (checkForm(currentGroupId)) {
         // Hide all forms and show the target form
     const forms = document.querySelectorAll('.form-group');
     forms.forEach(form => form.classList.add('hidden'));
-    document.getElementById(formId).classList.remove('hidden');
+    document.getElementById(targetGroupId).classList.remove('hidden');
     }
   };
 
