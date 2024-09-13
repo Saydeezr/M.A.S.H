@@ -1,6 +1,7 @@
 const start = document.getElementById('play-btn');
 const nextButton = document.querySelectorAll('.next-btn');
 const backButton = document.querySelectorAll('.back-btn');
+const submit = document.getElementById('submit-results');
 let formData = {};
 
 //pulls up form and hides landing page section
@@ -13,7 +14,7 @@ const formPopUp = (event) => {
 };
 
 
-//require all fields be filled out to move on to next form 
+//require all fields be filled out to move on to next form + collecting data
 function checkForm(currentGroup) {
     const formGroup = document.getElementById(currentGroup);
     const inputs = formGroup.querySelectorAll('input');
@@ -22,10 +23,11 @@ function checkForm(currentGroup) {
        // loops over all inputs
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].required = true;
-            // console.log(inputs[i].value);
         // if input left empty, notifies user
             if (!inputs[i].value) {
                 console.log('INPUT REQUIRED');
+                const errorMsg = document.getElementById('error');
+                errorMsg.textContent = 'All fields required';
                 isValid = false;
             } else {
                 formData[inputs[i].id] =inputs[i].value
@@ -50,8 +52,6 @@ function showForm(event) {
     const currentGroup = document.querySelector('.form-group:not(.hidden)');
     const currentGroupId = currentGroup.id;
 
-    console.log('Current visible group:', currentGroup);
-
     //validate current form
     if (checkForm(currentGroupId)) {
         // Hide all forms and show the target form
@@ -63,9 +63,33 @@ function showForm(event) {
 
 
   //function to get calculate results
-  const submitResults = () => {
+  const calculateResults = (formData) => {
+    document.getElementById('section2').classList.add('hidden');
+    document.getElementById('section3').classList.remove('hidden');
+    
     console.log('Submitted Results!');
-    console.log(formData);
+    console.log('Form Data:', formData);
+
+    loverOptions = [lover1.value, lover2.value, lover3.value, lover4.value];
+    console.log('Lover Options:', loverOptions);
+    jobOptions = [job1.value, job2.value, job3.value, job4.value];
+    transportOptions = [transport1.value, transport2.value, transport3.value, transport4.value];
+    moneyOptions = [money1.value, money2.value, money3.value, money4.value];
+    petOptions = [pet1.value, pet2.value, pet3.value, pet4.value];
+
+    const randomSelection = Math.floor(Math.random() * loverOptions.length);
+
+    const pickLover = loverOptions[randomSelection];
+    const pickJob = jobOptions[randomSelection];
+    const pickTransport = transportOptions[randomSelection];
+    const pickMoney = moneyOptions[randomSelection];
+    const pickPet = petOptions[randomSelection];
+
+    console.log(pickLover);
+    console.log(pickJob);
+    console.log(pickTransport);
+    console.log(pickMoney);
+    console.log(pickPet);
   };
 
 
@@ -81,4 +105,8 @@ backButton.forEach(button => {
     button.addEventListener('click', (event) => {
         showForm(event);
     });
+});
+
+submit.addEventListener('click', () => {
+    calculateResults(formData);
 });

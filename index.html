@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="./assets/css/style.css" rel="stylesheet">
     <link href="./assets/css/form.css" rel="stylesheet">
+    <link href="./assets/css/result.css" rel="stylesheet">
     <link rel="icon" href="./assets/images/icon.svg" type="image/x-icon">
 </head>
 <body>
@@ -31,6 +32,7 @@
                     <div class="input-group">
                         <input class="form-control" type="text" id="name" />
                     </div>
+                    <div id="error"></div>
                     <button class="btn btn-default next-btn" data-target="lover-group" id="next">Next</button>
                 </div>
                 <!-- 1st part of questionnaire -->
@@ -54,6 +56,7 @@
                             <input class="form-control" type="text" id="lover4"/>
                         </div>
                     </div>
+                    <div id="error"></div>
                     <div class="row">
                         <button class="btn col back-btn" data-target="name-group">Back</button>
                         <button class="btn col next-btn" data-target="job-group">Next</button>
@@ -80,6 +83,7 @@
                             <input class="form-control" type="text" id="job4" />
                         </div>
                     </div>
+                    <div id="error"></div>
                     <div class="row">
                         <button class="btn col back-btn" data-target="lover-group">Back</button>
                         <button class="btn col next-btn" data-target="transport-group">Next</button>
@@ -106,6 +110,7 @@
                             <input class="form-control" type="text" id="transport4" />
                         </div>
                     </div>
+                    <div id="error"></div>
                     <div class="row">
                         <button class="btn col back-btn" data-target="job-group">Back</button>
                         <button class="btn col next-btn" data-target="money-group">Next</button>
@@ -132,9 +137,10 @@
                             <input class="form-control" type="text" id="money4" />
                         </div>
                     </div>
+                    <div id="error"></div>
                     <div class="row">
                         <button class="btn col back-btn" data-target="money-group" >Back</button>
-                        <button class="btn col next-btn" data-target="pet-group" id="submit-results">Submit</button>
+                        <button class="btn col next-btn" data-target="pet-group" id="next">Next</button>
                     </div>
                 </div>
                 <!-- 5th part of questionnaire -->
@@ -158,17 +164,18 @@
                             <input class="form-control" type="text" id="pet4" />
                         </div>
                     </div>
+                    <div id="error"></div>
                     <div class="row">
-                        <button onclick="showForm('money-group')" class="btn col back-btn" id="back">Back</button>
-                        <button type="submit" onclick="submitResults()" class="btn col" id="submit-results">Submit</button>
+                        <button class="btn col back-btn" data-target="pet-group" id="back">Back</button>
+                        <button type="submit" class="btn col" id="submit-results">Submit</button>
                     </div>
                 </div>
             </form>
         </div>
 
         <div class="hidden" id="section3" >
-            <div>
-                <h4>RESULTS:</h4>
+            <div class="result-container">
+                <h4 class="result-header">RESULTS:</h4>
             </div>
         </div>
         
