@@ -84,12 +84,21 @@ function showForm(event) {
     const pickMoney = moneyOptions[randomSelection];
     const pickPet = petOptions[randomSelection];
 
-    console.log(pickLover);
-    const
-    console.log(pickJob);
-    console.log(pickTransport);
-    console.log(pickMoney);
-    console.log(pickPet);
+    
+    const loverSection = document.getElementById('lover-result');
+    loverSection.textContent = `You will spend the rest of your life with ${pickLover}`;
+
+    const jobSection = document.getElementById('job-result');
+    jobSection.textContent = `Your job will be ${pickJob}`;
+
+    const transportSection = document.getElementById('transport-result');
+    transportSection.textContent = `You will travel by ${pickTransport}`;
+
+    const moneySection = document.getElementById('money-result');
+    moneySection.textContent = `You will have ${pickMoney}`;
+
+    const petSection = document.getElementById('pet-result');
+    petSection.textContent = `Your pet will be a ${pickPet}`;
   };
 
 
