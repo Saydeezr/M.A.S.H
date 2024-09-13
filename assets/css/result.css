@@ -1,12 +1,99 @@
 .result-container{
-    background-color: rgb(191, 181, 211);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 75%;
+    width: 90%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-image: url('../images/background.svg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    border: 2px solid #7a00ff; 
+    box-shadow: 0 0 20px rgba(122, 0, 255, 0.75);
+    text-align: center;
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
+
 .result-header{
-    color: white
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #7a00ff, #00ffd5, #7a00ff);
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorShift 10s linear infinite, bounceIn 2s ease-out;
+    margin-bottom: 20px;
+}
+@keyframes colorShift {
+    0% { background-position: 0 0; }
+    50% { background-position: 200% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.words-container p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+
+.restart-btn {
+    display: inline-block;
+    padding: 15px 15px;
+    margin-top: 20px;
+    background-color: #7a00ff; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 0 5px rgba(122, 0, 255, 0.75); 
+    transition: all 0.7s ease;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+}
+
+.restart-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.7s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.restart-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.restart-btn:hover {
+    background-color: #95ff00; 
+    border-color: #95ff00;
+    box-shadow: 0 3px rgba(149, 255, 0, 0.75); 
+    transform: translateY(2px);
+}
+
+.restart-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px rgba(122, 0, 255, 0.75); 
 }

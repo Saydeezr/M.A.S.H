@@ -66,12 +66,11 @@ function showForm(event) {
   const calculateResults = (formData) => {
     document.getElementById('section2').classList.add('hidden');
     document.getElementById('section3').classList.remove('hidden');
-    
+
     console.log('Submitted Results!');
     console.log('Form Data:', formData);
 
     loverOptions = [lover1.value, lover2.value, lover3.value, lover4.value];
-    console.log('Lover Options:', loverOptions);
     jobOptions = [job1.value, job2.value, job3.value, job4.value];
     transportOptions = [transport1.value, transport2.value, transport3.value, transport4.value];
     moneyOptions = [money1.value, money2.value, money3.value, money4.value];
@@ -86,6 +85,7 @@ function showForm(event) {
     const pickPet = petOptions[randomSelection];
 
     console.log(pickLover);
+    const
     console.log(pickJob);
     console.log(pickTransport);
     console.log(pickMoney);
