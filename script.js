@@ -71,20 +71,21 @@ function showForm(event) {
     console.log('Submitted Results!');
     console.log('Form Data:', formData);
 
+    homeOptions = ["mansion", "apartment", "shack", "house"]
     loverOptions = [lover1.value, lover2.value, lover3.value, lover4.value];
     jobOptions = [job1.value, job2.value, job3.value, job4.value];
     transportOptions = [transport1.value, transport2.value, transport3.value, transport4.value];
     moneyOptions = [money1.value, money2.value, money3.value, money4.value];
     petOptions = [pet1.value, pet2.value, pet3.value, pet4.value];
 
-    
+    const randomHomeSelection = Math.floor(Math.random() * homeOptions.length);
     const randomLoverSelection = Math.floor(Math.random() * loverOptions.length);
     const randomJobSelection = Math.floor(Math.random() * jobOptions.length);
     const randomTransportSelection = Math.floor(Math.random() * transportOptions.length);
     const randomMoneySelection = Math.floor(Math.random() * moneyOptions.length);
     const randomPetSelection = Math.floor(Math.random() * petOptions.length);
    
-
+    const pickHome = homeOptions[randomHomeSelection];
     const pickLover = loverOptions[randomLoverSelection];
     const pickJob = jobOptions[randomJobSelection];
     const pickTransport = transportOptions[randomTransportSelection];
@@ -93,16 +94,16 @@ function showForm(event) {
 
     
     const loverSection = document.getElementById('lover-result');
-    loverSection.textContent = `You will spend the rest of your life with ${pickLover}`;
+    loverSection.textContent = `You will spend the rest of your life with ${pickLover} living together in your ${pickHome}.`;
 
     const jobSection = document.getElementById('job-result');
-    jobSection.textContent = `You will spend your days as a professional ${pickJob}`;
+    jobSection.textContent = `You will spend your days as a professional ${pickJob}.`;
 
     const transportSection = document.getElementById('transport-result');
-    transportSection.textContent = `Life will be a breeze as you get by on your ${pickTransport}`;
+    transportSection.textContent = `Life will be a breeze as you get by on your ${pickTransport}.`;
 
     const moneySection = document.getElementById('money-result');
-    moneySection.textContent = `You will be the top earner at about ${pickMoney} per year`;
+    moneySection.textContent = `You will be the top earner at about ${pickMoney} per year.`;
 
     const petSection = document.getElementById('pet-result');
     petSection.textContent = `At the end of a long day, you will always have your pet ${pickPet} to greet you when you get home.`;
