@@ -76,29 +76,35 @@ function showForm(event) {
     moneyOptions = [money1.value, money2.value, money3.value, money4.value];
     petOptions = [pet1.value, pet2.value, pet3.value, pet4.value];
 
-    const randomSelection = Math.floor(Math.random() * loverOptions.length);
+    
+    const randomLoverSelection = Math.floor(Math.random() * loverOptions.length);
+    const randomJobSelection = Math.floor(Math.random() * jobOptions.length);
+    const randomTransportSelection = Math.floor(Math.random() * transportOptions.length);
+    const randomMoneySelection = Math.floor(Math.random() * moneyOptions.length);
+    const randomPetSelection = Math.floor(Math.random() * petOptions.length);
+   
 
-    const pickLover = loverOptions[randomSelection];
-    const pickJob = jobOptions[randomSelection];
-    const pickTransport = transportOptions[randomSelection];
-    const pickMoney = moneyOptions[randomSelection];
-    const pickPet = petOptions[randomSelection];
+    const pickLover = loverOptions[randomLoverSelection];
+    const pickJob = jobOptions[randomJobSelection];
+    const pickTransport = transportOptions[randomTransportSelection];
+    const pickMoney = moneyOptions[randomMoneySelection];
+    const pickPet = petOptions[randomPetSelection];
 
     
     const loverSection = document.getElementById('lover-result');
     loverSection.textContent = `You will spend the rest of your life with ${pickLover}`;
 
     const jobSection = document.getElementById('job-result');
-    jobSection.textContent = `Your job will be ${pickJob}`;
+    jobSection.textContent = `You will spend your days as a professional ${pickJob}`;
 
     const transportSection = document.getElementById('transport-result');
-    transportSection.textContent = `You will travel by ${pickTransport}`;
+    transportSection.textContent = `Life will be a breeze as you get by on your ${pickTransport}`;
 
     const moneySection = document.getElementById('money-result');
-    moneySection.textContent = `You will have ${pickMoney}`;
+    moneySection.textContent = `You will be the top earner at about ${pickMoney} per year`;
 
     const petSection = document.getElementById('pet-result');
-    petSection.textContent = `Your pet will be a ${pickPet}`;
+    petSection.textContent = `At the end of a long day, you will always have your pet ${pickPet} to greet you when you get home.`;
   };
 
 
@@ -116,6 +122,7 @@ backButton.forEach(button => {
     });
 });
 
-submit.addEventListener('click', () => {
+submit.addEventListener('click', (event) => {
+    event.preventDefault();
     calculateResults(formData);
 });
