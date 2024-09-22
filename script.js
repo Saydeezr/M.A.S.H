@@ -2,6 +2,7 @@ const start = document.getElementById('play-btn');
 const nextButton = document.querySelectorAll('.next-btn');
 const backButton = document.querySelectorAll('.back-btn');
 const submit = document.getElementById('submit-results');
+const restart = document.getElementById('restart-btn');
 let formData = {};
 
 //pulls up form and hides landing page section
@@ -125,4 +126,8 @@ backButton.forEach(button => {
 submit.addEventListener('click', (event) => {
     event.preventDefault();
     calculateResults(formData);
+});
+
+restart.addEventListener('click', () => { 
+    location.reload();
 });

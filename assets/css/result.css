@@ -2,7 +2,6 @@
     width: 90%;
     padding: 20px;
     background-color: #f0f0f0;
-    background-image: url('../images/background.svg');
     background-size: cover; 
     background-repeat: no-repeat;
     border: 2px solid #7a00ff; 
@@ -52,7 +51,7 @@
 }
 
 
-.restart-btn {
+#restart-btn {
     display: inline-block;
     padding: 15px 15px;
     margin-top: 20px;
@@ -69,7 +68,7 @@
     width: 50%;
 }
 
-.restart-btn::before {
+#restart-btn::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -82,18 +81,18 @@
     transform: translate(-50%, -50%) scale(0);
 }
 
-.restart-btn:hover::before {
+#restart-btn:hover::before {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.restart-btn:hover {
+#restart-btn:hover {
     background-color: #95ff00; 
     border-color: #95ff00;
     box-shadow: 0 3px rgba(149, 255, 0, 0.75); 
     transform: translateY(2px);
 }
 
-.restart-btn:active {
+#restart-btn:active {
     transform: translateY(4px);
     box-shadow: 0 1px rgba(122, 0, 255, 0.75); 
 }
